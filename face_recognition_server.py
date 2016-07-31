@@ -38,6 +38,7 @@ class SimilarityHandler(tornado.web.RequestHandler):
 
 if __name__ == '__main__':
     
+    logging.info('server start')
     app=tornado.web.Application([ (r'/similarity', SimilarityHandler) ])
     app.listen(3000)
     tornado.ioloop.IOLoop.instance().start()
